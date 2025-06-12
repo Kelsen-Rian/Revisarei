@@ -1,0 +1,98 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Sobre{% endblock  %}
+
+{% block content %}
+<style>
+    .perfil-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 50px;
+        flex-wrap: wrap;
+    }
+    .perfil-box {
+        display: flex;
+        align-items: center;
+        margin: 20px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        max-width: 900px;
+    }
+    .perfil-imagem {
+        text-align: center;
+        margin-right: 30px;
+    }
+    .perfil {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        border: 5px solid white;
+        object-fit: cover;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .perfil:hover {
+        transform: scale(1.1);
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+        border-color: #388E3C;
+    }
+    .perfil-texto {
+        flex: 1;
+        max-width: 500px;
+    }
+    .instagram-link {
+        display: block;
+        margin-top: 15px;
+        text-align: center;
+    }
+    .instagram-link img {
+        width: 32px;
+        height: 32px;
+        transition: transform 0.3s ease;
+    }
+    .instagram-link img:hover {
+        transform: scale(1.2);
+    }
+</style>
+
+<h1 style="font-weight:bold;">Sobre nós</h1>
+
+<div class="perfil-container">
+
+    <div class="perfil-box">
+        <div class="perfil-imagem">
+            <img src="{% static 'img/meperfil.jpeg' %}" alt="kelsen" class="perfil">
+            <a href="https://www.instagram.com/kelsen_rian/" target="_blank" class="instagram-link">
+                <i class="fab fa-instagram" style="font-size: 30px; color: white;"></i>
+            </a>
+        </div>
+        <div class="perfil-texto">
+            <h2 style="color: white;">Kelsen Rian</h2>
+            <span>
+                Sou licenciado em Matemática e técnico em Informática, áreas nas quais tenho uma grande paixão. A programação é um dos meus maiores interesses e, ao longo dos anos, tive a oportunidade de aprofundar meus conhecimentos e aplicar em diversos projetos. 
+                Tive a honra de fazer parte do grupo de desenvolvimento da OCHE Ceará (Olimpíada de Ciências Humanas do Estado do Ceará), onde pude colaborar com equipes em soluções tecnológicas para a educação e ampliar ainda mais minhas habilidades em tecnologia.
+            </span>
+        </div>
+    </div>
+
+    <div class="perfil-box">
+        <div class="perfil-imagem">
+            <img src="{% static 'img/hudsonperfil.jpeg' %}" alt="hudson" class="perfil">
+            <a href="https://www.instagram.com/prof.hudsonlopes/" target="_blank" class="instagram-link">
+                <i class="fab fa-instagram" style="font-size: 30px; color: white;"></i>
+            </a>
+        </div>
+        <div class="perfil-texto">
+            <h2 style="color: white;">Hudson Lopes</h2>
+            <span>
+                Professor de português, alemão, revisor, diagramador e estudante de programação.
+                Gosta de música, conversas, amigos, família e jogar muito RPG, agradecendo a Deus por tudo que tem todos os dias de sua vida.
+            </span>
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}
