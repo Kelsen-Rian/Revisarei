@@ -1,2 +1,0 @@
-# Revisarei
-Site Revisarei.
